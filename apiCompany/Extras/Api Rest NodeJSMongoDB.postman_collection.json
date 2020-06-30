@@ -1,0 +1,241 @@
+{
+	"info": {
+		"_postman_id": "34aed788-d77c-4f1f-b81a-31b53757516f",
+		"name": "Api Rest NodeJSMongoDB",
+		"description": "proyecto NodeJS, MongoDB React",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "IndexProducts",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "authorization",
+						"value": "estaesmillavesecreta",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/product",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"product"
+					]
+				},
+				"description": "Listar todos los productos"
+			},
+			"response": []
+		},
+		{
+			"name": "CreateProduct",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "authorization",
+						"value": "estaesmillavesecreta",
+						"type": "text"
+					},
+					{
+						"key": "role",
+						"value": "admin",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"Macbook Pro\",\n\t\"price\":1500,\n\t\"category\":\"Hogar\",\n\t\"stock\":8\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/product/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"product",
+						""
+					]
+				},
+				"description": "Crear un nuevo producto"
+			},
+			"response": []
+		},
+		{
+			"name": "ShowProductName",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "estaesmillavesecreta",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/product/name/Macbook Pro",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"product",
+						"name",
+						"Macbook Pro"
+					]
+				},
+				"description": "Muestra un producto en específico"
+			},
+			"response": []
+		},
+		{
+			"name": "ShowProductCategory",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"type": "text",
+						"value": "estaesmillavesecreta"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/product/category/Hogar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"product",
+						"category",
+						"Hogar"
+					]
+				},
+				"description": "Muestra un producto en específico"
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateProduct",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "estaesmillavesecreta",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"price\": 2000\n\t\n\t\n}\n\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/product/name/Macbook Pro",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"product",
+						"name",
+						"Macbook Pro"
+					]
+				},
+				"description": "Actualizar un producto en especifico"
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteProduct",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "authorization",
+						"value": "estaesmillavesecreta",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/product/name/Macbook Pro",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"product",
+						"name",
+						"Macbook Pro"
+					]
+				},
+				"description": "Borrar un producto en especifico"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
