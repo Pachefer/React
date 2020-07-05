@@ -1,0 +1,235 @@
+{
+	"info": {
+		"_postman_id": "096b69a7-ce4b-48ca-8646-c769e54e6610",
+		"name": "GAPSI_SpringBoot_Hibernate_MySql_CRUD",
+		"description": "Busqueda general, individual, alta, baja, actualizacion de productos ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "addArticles",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n\t{\n    \"id\": 3,\n    \"name\": \"Mac book Pro 18\",\n    \"description\": \"laptop\",\n    \"price\": 60000.00,\n    \"model\": \"2010\"\n\t},\n\t{\n    \"id\": 4,\n    \"name\": \"Mac book Pro 22\",\n    \"description\": \"laptop\",\n    \"price\": 80000.00,\n    \"model\": \"2015\"\n\t}\n\t\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9191/rest/article/addArticles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"rest",
+						"article",
+						"addArticles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findAllArticles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9191/rest/article/findAllArticles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"rest",
+						"article",
+						"findAllArticles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addArticle",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 2,\n    \"name\": \"Mac book Pro 18\",\n    \"description\": \"laptop\",\n    \"price\": 70000.00,\n    \"model\": \"2013\"\n\t}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9191/rest/article/addArticle",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"rest",
+						"article",
+						"addArticle"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findArticletById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9191/rest/article/findArticleById/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"rest",
+						"article",
+						"findArticleById",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findArticleByName",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:9191/rest/article/Mac book Pro 15",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"rest",
+						"article",
+						"Mac book Pro 15"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateArticle",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"description\": \"laptop\",\n    \"price\": 60000.00,\n    \"model\": \"2010\"\n\t}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9191/rest/article/updateArticle/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"rest",
+						"article",
+						"updateArticle",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteArticle",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9191/rest/article/deleteArticle/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"rest",
+						"article",
+						"deleteArticle",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
